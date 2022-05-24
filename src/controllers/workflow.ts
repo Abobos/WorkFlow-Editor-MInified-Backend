@@ -11,7 +11,7 @@ class WorkflowController {
       response.sendSuccessResponse(
         res,
         200,
-        "workflow retrieved successfully",
+        "workflows retrieved successfully",
         result
       );
     } catch (error) {

@@ -9,7 +9,7 @@ export class Workflow {
 
 class Procedure {
   step: string;
-  substeps: string[];
+  substeps?: string[];
 }
 
 class Definition {

@@ -14,6 +14,7 @@ class UniversalModel {
   async insert(queryDetails: queryParamsII): Promise<any> {
     const queryStatement = `INSERT INTO ${this.resource} (${queryDetails.column}) 
                             VALUES (${queryDetails.values}) RETURNING *`;
+
     logger.appLogger.info(queryStatement);
 
     const { rows } = await db.query(queryStatement);

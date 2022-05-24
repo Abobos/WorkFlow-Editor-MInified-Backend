@@ -1,6 +1,6 @@
 import { Workflow } from "../controllers/types";
 
-import WorkflowRepository from "../repositories/worfklow";
+import WorkflowRepository from "../repositories/workflow";
 
 class WorkflowService {
   static async getWorkflows() {
@@ -20,11 +20,11 @@ class WorkflowService {
     try {
       const column = "name, version, scope, apparatus, definitions, procedures";
 
-      const values = `'${data.name}', ${data.version}, '${data.scope}', '[${
-        data.apparatus
-      }]', '${JSON.stringify(data.definitions)}', '${JSON.stringify(
-        data.procedures
-      )}'`;
+      const values = `'${data.name}', ${data.version}, '${
+        data.scope
+      }', '${JSON.stringify(data.apparatus)}', '${JSON.stringify(
+        data.definitions
+      )}', '${JSON.stringify(data.procedures)}'`;
 
       return await WorkflowRepository.create(column, values);
     } catch (error) {
