@@ -11,7 +11,9 @@
     "start:dev": "nodemon src/server.ts",
     "start": "node build/server.js",
     "db:migrate-dev": "ts-node -- src/migrations/tables.ts",
-    "db:migrate": "node build/migrations/tables.js"
+    "db:migrate": "node build/migrations/tables.js",
+    "db:seed-dev": "ts-node -- src/migrations/seeds.ts",
+    "db:seed": "node build/migrations/seeds.js"
   },
   "author": "Blessing Makaraba",
   "license": "ISC",

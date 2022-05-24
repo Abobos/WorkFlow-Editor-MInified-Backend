@@ -19,12 +19,12 @@ const input: Workflow = {
     {
       step: "Boil Rice",
     },
-    { step: "Cook", substeps: ["jjjjj", "jjkjkkjk"] },
+    { step: "Cook", substeps: ["wash", "filter"] },
   ],
 };
 
 export class WorkflowFixture {
-  static async seed() {
+  static async load() {
     await WorkflowService.saveWorkflow(input);
   }
 

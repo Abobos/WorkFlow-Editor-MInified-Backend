@@ -5,7 +5,7 @@ import { Workflow } from "../src/controllers/types";
 import { WorkflowFixture } from "./fixtures/workflow";
 
 beforeAll(async () => {
-  await WorkflowFixture.seed();
+  await WorkflowFixture.load();
 });
 
 describe("Workflow", () => {
@@ -25,7 +25,7 @@ describe("Workflow", () => {
         {
           step: "Boil Rice",
         },
-        { step: "Cook", substeps: ["jjjjj", "jjkjkkjk"] },
+        { step: "Cook", substeps: ["wash", "filter"] },
       ],
     };
 

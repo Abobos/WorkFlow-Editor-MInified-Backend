@@ -11,7 +11,7 @@ const workflowData = `
    definitions TEXT NOT NULL,
    apparatus TEXT NOT NULL,
    procedures TEXT NOT NULL,
-   created_at DATE NOT NULL DEFAULT CURRENT_DATE
+   created_at TIMESTAMP NOT NULL DEFAULT NOW()
   );`;
 
 (async function migrate() {
