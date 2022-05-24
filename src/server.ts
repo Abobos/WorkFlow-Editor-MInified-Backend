@@ -1,8 +1,6 @@
-import "module-alias/register";
-
 import http from "http";
 import { App } from "./express-app";
-import { logger } from "@utils/index";
+import { logger } from "./utils/index";
 
 const expressApp = new App();
 

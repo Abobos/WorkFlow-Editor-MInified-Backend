@@ -1,12 +1,19 @@
 import { Router, Request, Response } from "express";
 
-import { response } from "@utils/index";
+import { response } from "../utils/index";
+import workflowRouter from "./workflow";
 
 const router = Router();
 
 router.get("/", (_req: Request, res: Response) =>
-  response.sendSuccessResponse(res, 200, "Welcome to WorkFlow Data E Service")
+  response.sendSuccessResponse(
+    res,
+    200,
+    "Welcome to WorkFlow Editor API Service"
+  )
 );
+
+router.use("/api/v1", workflowRouter);
 
 router.all("*", (_req: Request, res: Response) =>
   response.sendErrorResponse(

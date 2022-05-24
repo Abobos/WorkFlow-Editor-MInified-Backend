@@ -3,9 +3,8 @@ import express, { Application } from "express";
 import morgan from "morgan";
 import cors from "cors";
 
-import indexRoute from "@routes/index";
-
-import { defaultErrorHandler } from "@middlewares/error";
+import indexRoute from "./routes/index";
+import { defaultErrorHandler } from "./middlewares/error";
 
 export class App {
   public app: Application;

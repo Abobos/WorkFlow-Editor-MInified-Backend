@@ -1,5 +1,5 @@
-import { CustomError } from "@exceptions/index";
-import { logger } from "@utils/index";
+import { CustomError } from "../exceptions/index";
+import { logger } from "../utils/index";
 import { Request, Response, NextFunction, Application } from "express";
 
 export const defaultErrorHandler = (app: Application) =>
