@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": ["es5", "DOM"],
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "build",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "moduleResolution": "node",
+    "baseUrl": "",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@exceptions/*": ["src/exceptions/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@routes/*": ["src/routes/*"],
+      "@repositories/*": ["src/repositories/*"],
+      "@utils/*": ["src/utils/*"],
+      "@config/*": ["src/config/*"]
+    }
+  }
+}
