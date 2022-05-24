@@ -31,6 +31,14 @@ class UniversalModel {
 
     return rows;
   }
+
+  async truncate() {
+    const queryStatement = `TRUNCATE TABLE ${this.resource}`;
+
+    logger.appLogger.info(queryStatement);
+
+    await db.query(queryStatement);
+  }
 }
 
 export default UniversalModel;

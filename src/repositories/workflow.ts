@@ -2,16 +2,16 @@ import UniversalModel from "../models/index";
 
 class WorkflowDataRepository {
   private table = "WorkflowData";
-  public stockDataRepository: UniversalModel;
+  public workflowDataRepository: UniversalModel;
   static instance: WorkflowDataRepository;
 
   constructor() {
-    this.stockDataRepository = new UniversalModel(this.table);
+    this.workflowDataRepository = new UniversalModel(this.table);
   }
 
   async create(column: string, values: string) {
     try {
-      const result = await this.stockDataRepository.insert({
+      const result = await this.workflowDataRepository.insert({
         column,
         values,
       });
@@ -24,7 +24,7 @@ class WorkflowDataRepository {
 
   async findAll(column: string, condition?: string) {
     try {
-      const result = await this.stockDataRepository.select({
+      const result = await this.workflowDataRepository.select({
         column,
         condition,
       });

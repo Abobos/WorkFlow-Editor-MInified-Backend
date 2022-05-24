@@ -2,6 +2,11 @@ import app from "../src/server";
 
 import request from "supertest";
 import { Workflow } from "../src/controllers/types";
+import { WorkflowFixture } from "./fixtures/workflow";
+
+beforeAll(async () => {
+  await WorkflowFixture.seed();
+});
 
 describe("Workflow", () => {
   test("", async () => {
@@ -62,6 +67,7 @@ describe("Workflow", () => {
   });
 });
 
-afterAll(() => {
+afterAll(async () => {
+  await WorkflowFixture.destroy();
   app.close();
 });

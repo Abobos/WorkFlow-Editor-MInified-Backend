@@ -9,9 +9,7 @@ const PORT = expressApp.getPort();
 const server = http.createServer(expressApp.app);
 
 server.listen(PORT, () =>
-  logger.appLogger.info(
-    `${expressApp.getEnv()}:server App started on PORT ${PORT}`
-  )
+  logger.appLogger.info(`${expressApp.getEnv()}: server started on ${PORT}`)
 );
 
 export default server;
