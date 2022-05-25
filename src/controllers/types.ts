@@ -1,4 +1,4 @@
-export class Workflow {
+export class WorkflowDto {
   name: string;
   version?: number;
   scope: string;
@@ -7,12 +7,12 @@ export class Workflow {
   procedures: Procedure[];
 }
 
-class Procedure {
+export class Procedure {
   step: string;
   substeps?: string[];
 }
 
-class Definition {
+export class Definition {
   name: string;
   description: string;
 }

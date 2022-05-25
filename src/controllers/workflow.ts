@@ -1,7 +1,7 @@
-import { response } from "../utils/index";
+import { response } from '../utils/index';
 
-import { Request, Response, NextFunction } from "express";
-import WorkflowService from "../services/workflow";
+import { Request, Response, NextFunction } from 'express';
+import WorkflowService from '../services/workflow';
 
 class WorkflowController {
   static async getWorkflows(_req: Request, res: Response, next: NextFunction) {
@@ -11,7 +11,7 @@ class WorkflowController {
       response.sendSuccessResponse(
         res,
         200,
-        "workflows retrieved successfully",
+        'workflows retrieved successfully',
         result
       );
     } catch (error) {
@@ -26,7 +26,7 @@ class WorkflowController {
       response.sendSuccessResponse(
         res,
         201,
-        "workflow saved successfully",
+        'workflow saved successfully',
         result
       );
     } catch (error) {

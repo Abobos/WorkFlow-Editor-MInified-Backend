@@ -1,8 +1,10 @@
-import UniversalModel from "../models/index";
+import UniversalModel from '../models/index';
 
 class WorkflowDataRepository {
-  private table = "WorkflowData";
+  private table = 'WorkflowData';
+
   public workflowDataRepository: UniversalModel;
+
   static instance: WorkflowDataRepository;
 
   constructor() {
@@ -13,7 +15,7 @@ class WorkflowDataRepository {
     try {
       const result = await this.workflowDataRepository.insert({
         column,
-        values,
+        values
       });
 
       return result;
@@ -26,7 +28,7 @@ class WorkflowDataRepository {
     try {
       const result = await this.workflowDataRepository.select({
         column,
-        condition,
+        condition
       });
 
       return result;

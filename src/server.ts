@@ -1,6 +1,6 @@
-import http from "http";
-import { App } from "./express-app";
-import { logger } from "./utils/index";
+import http from 'http';
+import { App } from './express-app';
+import { logger } from './utils/index';
 
 const expressApp = new App();
 

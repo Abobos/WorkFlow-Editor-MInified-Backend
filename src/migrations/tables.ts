@@ -1,5 +1,5 @@
-import db from "../config/pool";
-import { logger } from "../utils/index";
+import db from '../config/pool';
+import { logger } from '../utils/index';
 
 const workflowData = `
   DROP TABLE IF EXISTS WorkflowData CASCADE;
@@ -18,7 +18,7 @@ const workflowData = `
   try {
     await db.query(`${workflowData}`);
 
-    logger.appLogger.info("migration: database table created");
+    logger.appLogger.info('migration: database table created');
 
     process.exit();
   } catch (err: any) {

@@ -1,13 +1,13 @@
-import { Pool } from "pg";
+import { Pool } from 'pg';
 
-import "dotenv/config";
+import 'dotenv/config';
 
-import { envrionmentDetails } from "./types";
+import { envrionmentDetails } from './types';
 
-import { logger } from "../utils/index";
-import { envDatabaseSettings } from "./db";
+import { logger } from '../utils/index';
+import { envDatabaseSettings } from './db';
 
-const env: string = process.env.NODE_ENV || "development";
+const env: string = process.env.NODE_ENV || 'development';
 
 const envConfig: envrionmentDetails = envDatabaseSettings(env);
 const { envVariable } = envConfig;
@@ -17,7 +17,7 @@ const config = process.env[envVariable];
 const pool = new Pool({
   connectionString: config,
 
-  ...(env === "production" && { ssl: { rejectUnauthorized: false } }),
+  ...(env === 'production' && { ssl: { rejectUnauthorized: false } })
 });
 
 pool

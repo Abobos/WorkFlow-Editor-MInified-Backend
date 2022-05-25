@@ -1,4 +1,4 @@
-import { Response } from "express";
+import { Response } from 'express';
 
 export const sendSuccessResponse = (
   res: Response,
@@ -7,9 +7,9 @@ export const sendSuccessResponse = (
   data?: any
 ) =>
   res.status(code).send({
-    status: "success",
+    status: 'success',
     message,
-    data,
+    data
   });
 
 export const sendErrorResponse = (
@@ -18,6 +18,6 @@ export const sendErrorResponse = (
   errorMessage: any
 ) =>
   res.status(code).send({
-    status: "failure",
-    error: errorMessage,
+    status: 'failure',
+    error: errorMessage
   });

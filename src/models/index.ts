@@ -1,8 +1,8 @@
-import db from "../config/pool";
+import db from '../config/pool';
 
-import { queryParamsII, queryParamsIII } from "./types";
+import { queryParamsII, queryParamsIII } from './types';
 
-import { logger } from "../utils/index";
+import { logger } from '../utils/index';
 
 class UniversalModel {
   private resource: string;

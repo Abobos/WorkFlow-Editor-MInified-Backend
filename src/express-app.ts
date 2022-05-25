@@ -1,10 +1,10 @@
-import express, { Application } from "express";
+import express, { Application } from 'express';
 
-import morgan from "morgan";
-import cors from "cors";
+import morgan from 'morgan';
+import cors from 'cors';
 
-import indexRoute from "./routes/index";
-import { defaultErrorHandler } from "./middlewares/error";
+import indexRoute from './routes/index';
+import { defaultErrorHandler } from './middlewares/error';
 
 export class App {
   public app: Application;
@@ -16,7 +16,7 @@ export class App {
   }
 
   settings() {
-    this.app.set("port", this.port || process.env.PORT || 8080);
+    this.app.set('port', this.port || process.env.PORT || 8080);
   }
 
   middlewares() {
@@ -25,7 +25,7 @@ export class App {
 
     this.app.use(cors());
 
-    this.app.use(morgan("dev"));
+    this.app.use(morgan('dev'));
 
     this.app.use(indexRoute);
 
@@ -33,10 +33,10 @@ export class App {
   }
 
   getEnv() {
-    return this.app.get("env");
+    return this.app.get('env');
   }
 
   getPort() {
-    return this.app.get("port");
+    return this.app.get('port');
   }
 }
