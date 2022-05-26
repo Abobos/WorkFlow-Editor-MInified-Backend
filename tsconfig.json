@@ -13,16 +13,6 @@
     "baseUrl": "",
     "esModuleInterop": true,
     "resolveJsonModule": true
-    // "paths": {
-    //   "@exceptions/*": ["src/exceptions/*"],
-    //   "@controllers/*": ["src/controllers/*"],
-    //   "@middlewares/*": ["src/middlewares/*"],
-    //   "@services/*": ["src/services/*"],
-    //   "@routes/*": ["src/routes/*"],
-    //   "@repositories/*": ["src/repositories/*"],
-    //   "@utils/*": ["src/utils/*"],
-    //   "@config/*": ["src/config/*"]
-    // }
   },
   "include": ["src/**/*"]
 }
