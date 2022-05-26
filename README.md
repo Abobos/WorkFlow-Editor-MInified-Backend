@@ -43,9 +43,7 @@ For setup, These tools should be installed in your PC
 
   ##### N.B
 
-  -
-  -
-  -
+  - Add your postgresql database connection string to DATABASE_URL_DEV
 
 * Open terminal
 * Run `npm install` or `yarn install`
