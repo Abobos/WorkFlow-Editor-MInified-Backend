@@ -1,7 +1,7 @@
 import app from '../src/server';
 
 import request from 'supertest';
-import { Workflow } from '../src/controllers/types';
+import { WorkflowDto } from '../src/controllers/types';
 import WorkflowFixture from './fixtures/workflow';
 
 beforeAll(async () => {
@@ -10,7 +10,7 @@ beforeAll(async () => {
 
 describe('Workflow', () => {
   test('', async () => {
-    const input: Workflow = {
+    const input: WorkflowDto = {
       name: 'Pipette Apparatus',
       version: 1,
       scope: 'IT',
