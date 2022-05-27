@@ -34,6 +34,7 @@ For setup, These tools should be installed in your PC
 - [Node js](https://nodejs.org/en/download/)
 - [Insonmia](https://insomnia.rest/download/) or [Postman](https://www.getpostman.com/downloads/)
 - [Git](https://git-scm.com/downloads)
+- [POSTGRESQL](https://www.postgresql.org/)
 
 #### Installing
 
@@ -43,7 +44,7 @@ For setup, These tools should be installed in your PC
 
   ##### N.B
 
-  - Add your postgresql database connection string to DATABASE_URL_DEV
+  - Rename the .env-sample to .env and populate the file with your postgresql database connection string
 
 * Open terminal
 * Run `npm install` or `yarn install`
